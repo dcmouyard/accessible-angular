@@ -70,8 +70,11 @@ ul {
 }
 
 .picture {
+  background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  height: 768px;
+  width: 1024px;
 }
 
 h1,

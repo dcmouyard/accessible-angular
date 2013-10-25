@@ -10,6 +10,10 @@
 .impress-on-stack-dom .stack-dom-hidden,
 .impress-on-stack-accessibility .stack-accessibility-hidden,
 .impress-on-stack-aria .stack-aria-hidden,
+.impress-on-tech-monitor .stack-dom-hidden,
+.impress-on-wai-aria .wai-aria-hidden,
+.impress-on-aria-definition .wai-aria-hidden,
+.impress-on-attributes .wai-aria-hidden,
 .impress-on-final .final-hidden {
   opacity: 0;
 }
@@ -45,10 +49,6 @@
 
 .impress-on-tech-monitor #tech-monitor {
   background-image: url(../img/tech-monitor.png);
-  background-position: 50% 50%;
-  background-size: contain;
-  height: 768px;
-  width: 1024px;
 }
 
 #questions .title {
