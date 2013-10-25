@@ -1,6 +1,5 @@
 body {
-  /* background: #000 url(../img/f1bg.png) no-repeat 100% 100%; */
-  background: url(../img/f1-white.png) no-repeat 98% 98%, #000 url(../img/splat_darkgrey.png) no-repeat 100% 100%;
+  background: url(../img/f1-white.png) no-repeat 98% 98%, #000 url(../img/splat.png) no-repeat 100% 100%;
   color: #fff;
   font-weight: 300;
   text-shadow: #000 2px 2px;

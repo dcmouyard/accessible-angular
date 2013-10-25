@@ -3,7 +3,8 @@
 }
 
 .impress-on-title .step,
-.impress-on-dcmouyard .step {
+.impress-on-dcmouyard .step,
+.impress-on-final #questions {
   opacity: 0;
 }
 
