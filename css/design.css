@@ -156,3 +156,15 @@ li > .link  {
 li > .link  {
   margin-bottom: .25em;
 }
+
+.block-row {
+  padding: 0;
+  text-align: center;
+}
+
+.block {
+  background: rgb(248,102,70);
+  border: 3px solid #fff;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+}

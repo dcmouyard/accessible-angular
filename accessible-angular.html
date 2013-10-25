@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
   <meta name="viewport" content="width=1024" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <title>Accessibile Angular</title>
+  <title>Accessibile AngularJS</title>
   <meta name="author" content="Dan Mouyard" />
   <link href="http://fonts.googleapis.com/css?family=Oswald:700,400,300" rel="stylesheet">
   <link href="css/base.css" rel="stylesheet" />
@@ -20,41 +20,56 @@
 
 <div id="impress">
 
-  <article id="title" class="step" data-x="-800" data-y="-500" data-scale="3">
-    <h1 class="headline">Accessibile Angular</h1>
+  <article id="title" data-x="-800" data-y="-500" data-scale="3" class="step">
+    <h1 class="headline">Accessibile AngularJS</h1>
   </article>
 
-  <article id="dcmouyard" class="step" data-x="-175" data-y="680" data-scale="3">
+  <article id="dcmouyard" data-x="-175" data-y="680" data-scale="3" class="step">
     <h2>Dan Mouyard</h2>
     <h3>Senior Interface Engineer</h3>
     <div class="dan"><img src="img/avatar-150.png" alt=""></div>
     <p><a href="mailto:dmouyard@forumone.com">dmouyard@forumone.com</a><br><a href="http://twitter.com/dcmouyard">@dcmouyard</a></p>
   </article>
 
-  <article id="overview-stack" class="step" data-x="2000" data-y="200" data-scale="2">
+  <article id="overview-stack" data-x="2000" data-y="200" data-scale="2" class="step">
     <h2>Accessibility Stack</h2>
   </article>
 
-  <article id="overview-aria" class="step" data-x="2000" data-y="400" data-scale="2">
+  <article id="overview-aria" data-x="2000" data-y="400" data-scale="2" class="step">
     <h2>WAI-ARIA</h2>
   </article>
 
-  <article id="overview-angular" class="step" data-x="2000" data-y="600" data-scale="2">
-    <h2>Angular</h2>
+  <article id="overview-angular" data-x="2000" data-y="600" data-scale="2" class="step">
+    <h2>AngularJS</h2>
   </article>
 
-  <article id="accessibility-stack" class="step" data-x="2000" data-y="3000">
-    <h1>Accessibility Stack</h>
+  <article id="accessibility-stack" data-x="2000" data-y="3000" data-scale="2" class="step stack-dom-hidden stack-accessibility-hidden stack-aria-hidden">
+    <h1 class="headline">Accessibility Stack</h1>
   </article>
 
-  <article id="questions" class="step" data-x="0" data-y="0">
+  <article id="stack-dom" data-x="2000" data-y="3000" data-scale="1.5" class="step accessibility-stack-hidden stack-accessibility-visible stack-aria-visible">
+    <h2 class="title block-row"><span class="block">HTML</span> <span class="block">CSS</span> <span class="block">JS</span></h2>
+  </article>
+
+  <article id="tech-monitor" data-x="2000" data-y="5000" data-scale="1.5" class="step picture">
+    <p class="element-invisible">Display</p>
+  </article>
+
+  <article id="stack-accessibility" data-x="2000" data-y="2800" data-scale="1.5" class="step accessibility-stack-hidden stack-dom-hidden stack-aria-visible">
+    <h2 class="title block-row"><span class="block">Accessibility API</span></h2>
+    <h2 class="title block-row">&nbsp;</h2>
+  </article>
+
+  <article id="stack-aria" data-x="2000" data-y="2800" data-scale="1.5" class="step accessibility-stack-hidden stack-dom-hidden stack-accessibility-hidden">
+    <h2 class="title block-row"><span class="block">WAI-ARIA</span></h2>
+  </article>
+
+  <article id="questions" data-x="0" data-y="0" class="step final-hidden">
     <h2 class="title">Thank You!</h2>
     <p><strong>Any Questions?</strong></p>
   </article>
 
-
-  <div id="final" class="step" data-x="0" data-y="0" data-scale="4">
-  </div>
+  <div id="final" data-x="0" data-y="0" data-scale="4" class="step"></div>
 
   <script src="js/impress.min.js"></script>
   <script>impress().init();</script>

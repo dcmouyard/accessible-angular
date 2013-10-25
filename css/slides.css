@@ -1,10 +1,16 @@
+.impress-on-stack-accessibility .stack-accessibility-visible,
+.impress-on-stack-aria .stack-aria-visible,
 .impress-on-final .step {
   opacity: 1;
 }
 
 .impress-on-title .step,
 .impress-on-dcmouyard .step,
-.impress-on-final #questions {
+.impress-on-accessibility-stack .accessibility-stack-hidden,
+.impress-on-stack-dom .stack-dom-hidden,
+.impress-on-stack-accessibility .stack-accessibility-hidden,
+.impress-on-stack-aria .stack-aria-hidden,
+.impress-on-final .final-hidden {
   opacity: 0;
 }
 
@@ -23,6 +29,26 @@
 }
 #dcmouyard p {
   line-height: 2;
+}
+
+#stack-dom,
+#stack-accessibility {
+  transition: margin 0.5s;
+}
+
+.impress-on-stack-aria #stack-dom {
+  margin-top: 90px;
+}
+.impress-on-stack-aria #stack-accessibility {
+  margin-top: -200px;
+}
+
+.impress-on-tech-monitor #tech-monitor {
+  background-image: url(../img/tech-monitor.png);
+  background-position: 50% 50%;
+  background-size: contain;
+  height: 768px;
+  width: 1024px;
 }
 
 #questions .title {
