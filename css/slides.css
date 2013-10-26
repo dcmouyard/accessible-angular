@@ -14,6 +14,9 @@
 .impress-on-wai-aria .wai-aria-hidden,
 .impress-on-aria-definition .wai-aria-hidden,
 .impress-on-attributes .wai-aria-hidden,
+.impress-on-landmarks .landmarks-hidden,
+.impress-on-structure .structure-hidden,
+.impress-on-widgets .widgets-hidden,
 .impress-on-questions .questions-hidden,
 .impress-on-final .final-hidden {
   opacity: 0;
