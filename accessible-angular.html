@@ -20,26 +20,26 @@
 
 <div id="impress">
 
-  <article id="title" data-x="-800" data-y="-500" data-scale="3" class="step">
+  <article id="title" data-x="-800" data-y="-500" data-scale="3" class="step questions-hidden">
     <h1 class="headline">Accessibile AngularJS</h1>
   </article>
 
-  <article id="dcmouyard" data-x="-175" data-y="680" data-scale="3" class="step">
+  <article id="dcmouyard" data-x="-175" data-y="680" data-scale="3" class="step questions-hidden">
     <h2>Dan Mouyard</h2>
     <h3>Senior Interface Engineer</h3>
     <div class="dan"><img src="img/avatar-150.png" alt=""></div>
     <p><a href="mailto:dmouyard@forumone.com">dmouyard@forumone.com</a><br><a href="http://twitter.com/dcmouyard">@dcmouyard</a></p>
   </article>
 
-  <article id="overview-stack" data-x="2000" data-y="200" data-scale="2" class="step">
+  <article id="overview-stack" data-x="2000" data-y="200" data-scale="2" class="step questions-hidden">
     <h2>Accessibility Stack</h2>
   </article>
 
-  <article id="overview-aria" data-x="2000" data-y="400" data-scale="2" class="step">
+  <article id="overview-aria" data-x="2000" data-y="400" data-scale="2" class="step questions-hidden">
     <h2>WAI-ARIA</h2>
   </article>
 
-  <article id="overview-angular" data-x="2000" data-y="600" data-scale="2" class="step">
+  <article id="overview-angular" data-x="2000" data-y="600" data-scale="2" class="step questions-hidden">
     <h2>AngularJS</h2>
   </article>
 
@@ -52,7 +52,19 @@
   </article>
 
   <article id="tech-monitor" data-x="2000" data-y="5000" data-scale="1.5" class="step picture">
-    <p class="element-invisible">Display</p>
+    <p class="element-invisible">Monitor</p>
+  </article>
+
+  <article id="tech-mouse" data-x="2000" data-y="5000" data-scale="1.5" class="step picture">
+    <p class="element-invisible">Mouse</p>
+  </article>
+
+  <article id="tech-keyboard" data-x="2000" data-y="5000" data-scale="1.5" class="step picture">
+    <p class="element-invisible">Keyboard</p>
+  </article>
+
+  <article id="tech-speakers" data-x="2000" data-y="5000" data-scale="1.5" class="step picture">
+    <p class="element-invisible">Speakers</p>
   </article>
 
   <article id="stack-accessibility" data-x="2000" data-y="2800" data-scale="1.5" class="step accessibility-stack-hidden stack-dom-hidden stack-aria-visible wai-aria-hidden">
@@ -72,20 +84,97 @@
     <p>Technical specification to make websites and applications more accessible, especially with dynamic content and advanced user interface controls.</p>
   </article>
 
-  <article id="attributes" data-x="4000" data-y="3050" class="step wai-aria-hidden">
+  <article id="attributes" data-x="5000" data-y="3050" class="step wai-aria-hidden">
     <h2 class="title">HTML Attributes</h2>
   </article>
 
-  <article id="attributes-roles" data-x="4000" data-y="3150" class="step wai-aria-hidden">
+  <article id="attributes-roles" data-x="5000" data-y="3150" class="step wai-aria-hidden">
     <h2>Roles</h2>
   </article>
 
-  <article id="attributes-properties" data-x="4000" data-y="3225" class="step wai-aria-hidden">
+  <article id="attributes-properties" data-x="5000" data-y="3225" class="step wai-aria-hidden">
     <h2>Properties</h2>
   </article>
 
-  <article id="attributes-states" data-x="4000" data-y="3300" class="step wai-aria-hidden">
+  <article id="attributes-states" data-x="5000" data-y="3300" class="step wai-aria-hidden">
     <h2>States</h2>
+  </article>
+
+  <article id="aria-rules" data-x="5000" data-y="5000" class="step">
+    <h2 class="title">Rules for Using ARIA</h2>
+  </article>
+
+  <article id="aria-rules-1" data-x="5000" data-y="5100" class="step">
+    <h3>#1 Use native elements first.</h3>
+  </article>
+
+  <article id="aria-rules-2" data-x="5000" data-y="5200" class="step">
+    <h3>#2 Don't override native semantics.</h3>
+  </article>
+
+  <article id="angular" data-x="8000" data-y="5000" data-rotate="-90" class="step">
+    <h1 class="headline">AngularJS</h1>
+  </article>
+
+  <article id="angular-demo" data-x="8000" data-y="2000" data-rotate="-90" class="step">
+    <iframe src="demo/ng-1.html" height="600" width="800"></iframe>
+  </article>
+
+  <article id="angular-code" data-x="10000" data-y="2000" data-rotate="-90" class="step">
+    <pre>&lt;h1&gt;Todo List&lt;/h1&gt;
+&lt;div ng-controller="TodoCtrl"&gt;
+  &lt;span&gt;{{remaining()}} of {{todos.length}} remaining&lt;/span&gt;
+  [ &lt;a href="" ng-click="archive()"&gt;archive&lt;/a&gt; ]
+  &lt;ul&gt;
+    &lt;li ng-repeat="todo in todos"&gt;
+      &lt;input type="checkbox" ng-model="todo.done"&gt;
+      &lt;span class="done-{{todo.done}}"&gt;{{todo.text}}&lt;/span&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;form ng-submit="addTodo()"&gt;
+    &lt;input type="text" ng-model="todoText"  size="30"
+           placeholder="add new todo here"&gt;
+    &lt;input type="submit" value="add"&gt;
+  &lt;/form&gt;</pre>
+  </article>
+
+  <article id="angular-fix-1" data-x="10000" data-y="-1000" data-rotate="-90" class="step">
+    <s><pre>&lt;h1&gt;Todo List&lt;/h1&gt;</pre></s>
+    <br>
+    <pre>&lt;h1&gt;To-do List&lt;/h1&gt;</pre>
+  </article>
+
+  <article id="angular-fix-2" data-x="10000" data-y="-3000" data-rotate="-90" class="step">
+    <s><pre>&lt;span&gt;{{remaining()}} of {{todos.length}} remaining&lt;/span&gt;</pre></s>
+    <br>
+    <pre>&lt;span aria-live="polite"&gt;{{remaining()}} of {{todos.length}} remaining&lt;/span&gt;</pre>
+  </article>
+
+  <article id="angular-fix-3" data-x="10000" data-y="-6000" data-rotate="-90" class="step">
+    <s><pre>[ &lt;a href="" ng-click="archive()"&gt;archive&lt;/a&gt; ]</pre></s>
+    <br>
+    <pre>[ &lt;button class="button-link" ng-click="archive()"&gt;archive&lt;/button&gt; ]</pre>
+  </article>
+
+  <article id="angular-fix-4" data-x="10000" data-y="-9000" data-rotate="-90" class="step">
+    <s><pre>&lt;input type="checkbox" ng-model="todo.done"&gt;
+&lt;span class="done-{{todo.done}}"&gt;{{todo.text}}&lt;/span&gt;</pre></s>
+    <br>
+    <pre>&lt;input id="todo-{{$index}}" type="checkbox" ng-model="todo.done"&gt;
+&lt;label for="todo-{{$index}}" class="done-{{todo.done}}"&gt;{{todo.text}}&lt;/label&gt;</pre>
+  </article>
+
+  <article id="angular-fix-5" data-x="10000" data-y="-12000" data-rotate="-90" class="step">
+    <s><pre>&lt;input type="text" ng-model="todoText"  size="30"
+       placeholder="add new todo here"&gt;</pre></s>
+    <br>
+    <pre>&lt;label for="add-todo" class="element-invisible"&gt;New to-do item&lt;/label&gt;
+&lt;input id="add-todo" type="text" ng-model="todoText"
+       placeholder="add new to-do here" size="30"&gt;</pre>
+  </article>
+
+  <article id="angular-demo-fixed" data-x="8000" data-y="-12000" data-rotate="-90" class="step">
+    <iframe src="demo/ng-2.html" height="600" width="800"></iframe>
   </article>
 
   <article id="questions" data-x="0" data-y="0" class="step final-hidden">

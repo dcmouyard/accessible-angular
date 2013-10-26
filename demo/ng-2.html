@@ -1,0 +1,108 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <title>Accessible Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script>
+function TodoCtrl($scope) {
+  $scope.todos = [
+    {text:'learn angular', done:true},
+    {text:'build an angular app', done:false}
+  ];
+
+  $scope.addTodo = function () {
+    $scope.todos.push({text:$scope.todoText, done:false});
+    $scope.todoText = '';
+  };
+
+  $scope.remaining = function () {
+    var count = 0;
+    angular.forEach($scope.todos, function (todo) {
+      count += todo.done ? 0 : 1;
+    });
+    return count;
+  };
+
+  $scope.archive = function () {
+    var oldTodos = $scope.todos;
+    $scope.todos = [];
+    angular.forEach(oldTodos, function (todo) {
+      if (!todo.done) $scope.todos.push(todo);
+    });
+  };
+}</script>
+    <style>
+body {
+  font-size: 200%;
+  padding: 0 1em;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  max-width: 100%;
+}
+button,
+input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+.done-true {
+  text-decoration: line-through;
+}
+.button-link {
+  background: transparent;
+  border: 0;
+  color: blue;
+  cursor: pointer;
+  display: inline;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+}
+.element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  clip: rect(1px, 1px, 1px, 1px);
+}
+</style>
+  </head>
+  <body>
+    <h1>To-do List</h1>
+    <div ng-controller="TodoCtrl">
+      <span aria-live="polite">{{remaining()}} of {{todos.length}} remaining</span>
+      [ <button class="button-link" ng-click="archive()">archive</button> ]
+      <ul>
+        <li ng-repeat="todo in todos">
+          <input id="todo-{{$index}}" type="checkbox" ng-model="todo.done">
+          <label for="todo-{{$index}}" class="done-{{todo.done}}">{{todo.text}}</label>
+        </li>
+      </ul>
+      <form ng-submit="addTodo()">
+        <label for="add-todo" class="element-invisible">New to-do item</label>
+        <input id="add-todo" type="text" ng-model="todoText"
+               placeholder="add new to-do here" size="30">
+        <input type="submit" value="add">
+      </form>
+    </div>
+  </body>
+</html>

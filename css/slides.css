@@ -14,6 +14,7 @@
 .impress-on-wai-aria .wai-aria-hidden,
 .impress-on-aria-definition .wai-aria-hidden,
 .impress-on-attributes .wai-aria-hidden,
+.impress-on-questions .questions-hidden,
 .impress-on-final .final-hidden {
   opacity: 0;
 }
@@ -49,6 +50,18 @@
 
 .impress-on-tech-monitor #tech-monitor {
   background-image: url(../img/tech-monitor.png);
+}
+
+.impress-on-tech-mouse #tech-mouse {
+  background-image: url(../img/tech-mouse.png);
+}
+
+.impress-on-tech-keyboard #tech-keyboard {
+  background-image: url(../img/tech-keyboard.png);
+}
+
+.impress-on-tech-speakers #tech-speakers {
+  background-image: url(../img/tech-speakers.png);
 }
 
 #questions .title {

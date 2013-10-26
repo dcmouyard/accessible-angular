@@ -1,0 +1,89 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <title>Inaccessible Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script>
+function TodoCtrl($scope) {
+  $scope.todos = [
+    {text:'learn angular', done:true},
+    {text:'build an angular app', done:false}
+  ];
+
+  $scope.addTodo = function () {
+    $scope.todos.push({text:$scope.todoText, done:false});
+    $scope.todoText = '';
+  };
+
+  $scope.remaining = function () {
+    var count = 0;
+    angular.forEach($scope.todos, function (todo) {
+      count += todo.done ? 0 : 1;
+    });
+    return count;
+  };
+
+  $scope.archive = function () {
+    var oldTodos = $scope.todos;
+    $scope.todos = [];
+    angular.forEach(oldTodos, function (todo) {
+      if (!todo.done) $scope.todos.push(todo);
+    });
+  };
+}</script>
+    <style>
+body {
+  font-size: 200%;
+  padding: 0 1em;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  max-width: 100%;
+}
+button,
+input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+.done-true {
+  text-decoration: line-through;
+}
+</style>
+  </head>
+  <body>
+    <h1>Todo List</h1>
+    <div ng-controller="TodoCtrl">
+      <span>{{remaining()}} of {{todos.length}} remaining</span>
+      [ <a href="" ng-click="archive()">archive</a> ]
+      <ul>
+        <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.done">
+          <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+      </ul>
+      <form ng-submit="addTodo()">
+        <input type="text" ng-model="todoText"  size="30"
+               placeholder="add new todo here">
+        <input type="submit" value="add">
+      </form>
+    </div>
+  </body>
+</html>
