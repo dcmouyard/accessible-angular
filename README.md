@@ -7,5 +7,3 @@ In this session you'll learn:
 * Accessibility Stack
 * WAI-ARIA
 * AngularJS
-
-_These slides are from a presentation given at BadCamp on October 26, 2013._
